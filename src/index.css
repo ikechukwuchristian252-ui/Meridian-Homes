@@ -3,17 +3,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #0A2349;
-  --primary: #0A2349;
-  --accent: #0069D9;
+  --background: #ffffff;
+  --foreground: #0a2349;
+  --primary: #0a2349;
+  --accent: #0069d9;
 }
 
 .dark {
   --background: #061630;
-  --foreground: #FFFFFF;
-  --primary: #0A2349;
-  --accent: #0080FF;
+  --foreground: #ffffff;
+  --primary: #0a2349;
+  --accent: #0080ff;
 }
 
 @theme inline {
@@ -21,4 +21,26 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
+}
+
+/* Target the scrollable element (change .scrollable-element to body if hiding page scrollbars) */
+.scrollable-element {
+  -ms-overflow-style: none; /* Internet Explorer and Legacy Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, and Opera */
+.scrollable-element::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar completely */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar completely */
+}
+
+[data-aos="fade-up"] {
+  transform: translate3d(0, 20px, 0);
+}
+[data-aos="fade-up"].aos-animate {
+  transform: translate3d(0, 0, 0);
 }
